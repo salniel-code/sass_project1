@@ -1,0 +1,318 @@
+$font-stack-main: 'Lato', sans-serif;
+$font-stack-sec: 'Roboto', sans-serif;
+
+
+
+
+h5,
+h6,
+p,
+label {
+    font-family: $font-stack-main;
+}
+h1, h2,h3,h4,a{
+font-family:$font-stack-sec;
+}
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 27px;
+}
+
+h3 {
+    font-size: 25px;
+}
+h4{
+    font-size: 21px;
+    font-weight:800;
+    text-transform: capitalize;
+}
+h5{
+    text-transform: capitalize;
+   
+}
+h1,
+h2 {
+    text-transform: capitalize;
+    color: white;
+    letter-spacing: 1.2px;
+    font-weight: 900;
+  
+
+}
+
+h3 {
+    text-transform: capitalize;
+    font-weight: 800;
+  
+}
+
+p {
+    line-height: 160%;
+    word-spacing: 1px;
+
+}
+
+a {
+   text-decoration: none;
+    text-transform: uppercase;
+}
+
+/*- Media breakpoints -*/
+/* tablet size*/
+$breakpoint-tablet : 600px;
+/* desktop size*/
+$breakpoint-desktop : 900px;
+/* --- */
+
+/*- Colors -*/
+$color-white : #ffffff;
+
+
+$color-main: #ffffff;
+
+$color-third: darken($color-main,3);
+
+$color-four: #ac8f9a;
+
+$color-five: #363335;
+
+$color-textbg: darken($color-main,6);
+
+$color-text: #222222;
+
+$color-border: rgb(212, 211, 211);
+/*- dark color-theme */
+
+$color-main-dark: #57454c;
+
+$color-second-dark: #333636;
+
+$color-third-dark: lighten($color-main-dark, 10);
+
+$color-four-dark:lighten($color-main-dark, 30) ;
+
+$color-five-dark: #b3b3b3;
+
+$color-textbg-dark: #202527;
+
+$color-text-dark: #ffffff;
+
+$color-border-dark: rgb(212, 211, 211);
+
+@mixin theme-colors($light-theme: true) {
+    @if $light-theme {
+
+        background-color: $color-main;
+
+        #container {
+            background-color: $color-main;
+.small-menu{
+    background-color: $color-main;
+
+    .small-menu-ul{
+        background-color:$color-third;
+      
+    }
+}
+    
+    .nav-icon{
+        background: $color-four;
+    }   
+    .nav-icon:before{
+    @extend .nav-icon;
+    }
+    .nav-icon:after{
+    @extend .nav-icon;
+    } 
+
+            label {
+                color: $color-main-dark
+            }
+
+
+            a {
+                color: $color-four;
+
+            }
+
+            a:hover {
+                color: $color-five;
+            }
+
+            h1 {
+                outline: 6px solid $color-main-dark;
+                border-bottom: 2px solid $color-main;
+                background-color: $color-main-dark;
+
+            }
+
+            h2 {
+
+
+                color: $color-five;
+
+            }
+
+           
+            
+.main-content{
+    background-color:$color-textbg;
+}
+.counter{
+    outline: 6px solid $color-main-dark;
+    border-top: 2px solid $color-main;
+    background-color: $color-main-dark;
+color: $color-white;
+}
+            article {
+                
+
+                h3 {
+                    color: $color-main-dark;
+                }
+
+                
+            }
+
+           
+
+            footer {
+
+                border-top: 1px solid $color-textbg;
+                border-bottom: 1px solid $color-textbg;
+
+
+                p {
+                    color: $color-main-dark;
+
+                }
+            }
+
+        }
+
+    }
+
+    @else {
+
+        background-color: $color-main-dark;
+
+
+        #container {
+            background-color: $color-main-dark;
+
+.small-menu{
+    background-color: $color-main-dark;
+
+    .small-menu-ul{
+        background-color: $color-third-dark;
+        
+    }
+}
+.nav-icon{
+    background: $color-four;
+}   
+.nav-icon:before{
+@extend .nav-icon;
+}
+.nav-icon:after{
+@extend .nav-icon;
+} 
+            label {
+                color: $color-textbg
+            }
+
+
+
+            a {
+                color: $color-four-dark;
+
+            }
+
+            a:hover {
+                color: $color-five-dark;
+            }
+
+            h1 {
+                background-color: $color-textbg;
+                color: $color-main-dark;
+                outline: 5px solid $color-textbg;
+                border-bottom: 3px solid $color-main-dark;
+            }
+
+            h2 {
+                color: $color-textbg
+            }
+
+            .logotyp {
+                filter: invert(1);
+            }
+            .main-content {
+                background-color: $color-textbg-dark;
+            }
+            .counter{
+                background-color: $color-textbg;
+                color: $color-main-dark;
+                outline: 5px solid $color-textbg;
+                border-top: 3px solid $color-main-dark;
+           
+            }
+            article {
+              
+
+                p {
+                  
+                    color: $color-text-dark
+                }
+
+                h3 {
+                    color: $color-textbg;
+                }
+            }
+
+            
+
+            footer {
+
+                border-top: 1px solid $color-four;
+                border-bottom: 1px solid $color-four;
+
+
+                p {
+                    color: $color-four;
+
+                }
+            }
+        }
+
+
+
+
+    }
+
+}
+
+.dark {
+    @include theme-colors($light-theme: false);
+
+
+}
+
+.light {
+    @include theme-colors($light-theme: true);
+}
+
+/* -- */
+@mixin text-box {
+
+    padding: 15px;
+    border-bottom: 5px solid $color-four;
+}
+
+@mixin box-inside-shadow {
+    box-shadow: inset 0px 7px 9px -7px rgba(0, 0, 0, 0.479), inset 0px -7px 9px -7px rgba(0, 0, 0, 0.459);
+}
+
+$border-radius : 7px;

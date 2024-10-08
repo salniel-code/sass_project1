@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap"
+            rel="stylesheet">
+
+    </head>
+    <body id="body" class="light">
+        <div id="container">
+            <header>
+                <nav class="small-menu">
+                    <input class="menu-btn" id="menu-btn" type="checkbox">
+                    <label class="menu-icon" for="menu-btn">
+                        <span class="nav-icon"></span>
+                    </label>
+                    <ul class="small-menu-ul">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Read more</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="switch pretty p-switch p-fill">
+
+                    <input class="switch-input" type="checkbox"
+                        id="switch-checkbox" onclick="themeSwitcher()">
+                    <div class="state">
+
+                        <label><br>Tema</label>
+                    </div>
+                </div>
+                <div class="big-menu">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Donate</a></li>
+                            <li><a href="#">Read more</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+
+                <div class="logotyp"></div>
+                <div id="banner">
+                    <h1><span>World Animal Organisation</span></h1>
+                    <h2><span>A world for every creature</span></h2>
+
+                </div>
+
+            </header>
+            <main>
+                <div class="main-content">
+                    <div id="article-grid">
+                        <article>
+                            <div id="article-1">
+                                <h3>The history of the animal</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Etiam gravida nunc at
+                                    lectus
+                                    condimentum, quis tempus risus suscipit.
+                                    Donec
+                                    vel elit quis libero euismod imperdiet quis
+                                    in
+                                    tortor. Sed mattis vulputate nisi, sit amet
+                                    commodo sapien finibus nec. Vestibulum vel
+                                    urna
+                                    eleifend, eleifend nunc in, vehicula ipsum.</p>
+                            </div>
+                            <div id="img-box-1" class="img-box"></div>
+                        </article>
+                        <article>
+                            <div id="article-2">
+                                <h3>To create a caring world</h3>
+                                <p>Etiam lacinia vehicula nisi. Pellentesque id
+                                    justo diam. Fusce imperdiet vitae augue eu
+                                    lacinia. Morbi sem felis, varius quis
+                                    finibus
+                                    at, scelerisque sit amet sapien. Sit amet
+                                    orci hendrerit, sodales ipsum ac, vulputate
+                                    ipsum. Integer quis viverra sapien, nec
+                                    malesuada massa. In condimentum nec
+                                    dictum libero non.</p>
+                            </div>
+                            <div id="img-box-2" class="img-box"> </div>
+                        </article>
+                    </div>
+
+                </div>
+
+
+                <section class="counter">
+                    <div class="container">
+                        <div>
+                            <div class="count" data-target="750">0</div>
+                            <h5>Asiatic lion</h5>
+                        </div>
+                        <div>
+                            <div class="count" data-target="1500">0</div>
+                            <h5>Borneo pygmy elephant</h5>
+                        </div>
+                        <div>
+                            <div class="count" data-target="240">0</div>
+                            <h5>Red wolf</h5>
+                        </div>
+                        <div>
+                            <div class="count" data-target="800">0</div>
+                            <h5>Mountain gorillas</h5>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer><p>Skapad av Sally Nielsen © 2020</p></footer>
+
+        </div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
